@@ -34,21 +34,21 @@ def create_profile(request):
         form = ProfileForm()
     return render(request, 'all-pages/profile.html',{'form':form})
 
-# def trending(request):
-#     current_user= request.user
-#     profile = Profile.objects.get(username=current_user)
-#     if request.method == 'POST':
-#         form = TrendingForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             trends = form.save(commit=False)
-#             trends.username = current_user
-#             trends.save()
-#             return HttpResponseRedirect('/')
+def trending(request):
+    current_user= request.user
+    profile = Profile.objects.get(username=current_user)
+    if request.method == 'POST':
+        form = TrendingForm(request.POST, request.FILES)
+        if form.is_valid():
+            trends = form.save(commit=False)
+            trends.username = current_user
+            trends.save()
+            return HttpResponseRedirect('/')
 
-#     else:
-#         form = TrendingForm()
+    else:
+        form = TrendingForm()
 
-#     return render(request, 'all-pages/trends.html', {'form':form})
+    return render(request, 'all-pages/trends.html', {'form':form})
 
 
 # def alert(request):
