@@ -57,15 +57,15 @@ class Business(models.Model):
    def __str__(self):
        return self.name
 
-# class Authorities(models.Model):
-#     hood = models.ForeignKey(Neighbourhood,on_delete=models.CASCADE)
-#     name =models.CharField(max_length=100)
-#     email = models.EmailField()
-#     contact = models.IntegerField()
-#     address =models.CharField(max_length=100)
+class Authorities(models.Model):
+    hood = models.ForeignKey(Neighbourhood,on_delete=models.CASCADE)
+    name =models.CharField(max_length=100)
+    email = models.EmailField()
+    contact = models.IntegerField()
+    address =models.CharField(max_length=100)
 
-#     def __str__(self):
-#         return self.name       
+    def __str__(self):
+        return self.name       
 
 # class Profile(models.Model):
 #     avatar = models.ImageField(upload_to='media')
