@@ -144,13 +144,13 @@ def biz(request):
 
 #     # return render(request, 'all-pages/viewpost.html',{'form':form ,'comments':comments, 'post':post}, context)                       
 
-# @login_required(login_url='/accounts/login/')
-# def authorities(request):
-#     current_user=request.user
-#     profile=Profile.objects.get(username=current_user)
-#     authorities = Authorities.objects.filter(hood=profile.hood)
+@login_required(login_url='/accounts/login/')
+def authorities(request):
+    current_user=request.user
+    profile=Profile.objects.get(username=current_user)
+    authorities = Authorities.objects.filter(hood=profile.hood)
 
-#     return render(request,'authorities.html',{"authorities":authorities})
+    return render(request,'authorities.html',{"authorities":authorities})
 
 # @login_required(login_url='/accounts/login/')
 # def businesses(request):
