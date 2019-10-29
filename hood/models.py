@@ -67,17 +67,17 @@ class Authorities(models.Model):
     def __str__(self):
         return self.name       
 
-# class Profile(models.Model):
-#     avatar = models.ImageField(upload_to='media')
-#     description = HTMLField()
-#     hood = models.ForeignKey(Neighbourhood,on_delete=models.CASCADE)
-#     username = models.ForeignKey(User,on_delete=models.CASCADE)
-#     name =models.CharField(max_length=100)
-#     email = models.EmailField()
-#     #pub_date = models.DateField()
+class Profile(models.Model):
+    avatar = models.ImageField(upload_to='media')
+    description = HTMLField()
+    hood = models.ForeignKey(Neighbourhood,on_delete=models.CASCADE)
+    username = models.ForeignKey(User,on_delete=models.CASCADE)
+    name =models.CharField(max_length=100)
+    email = models.EmailField()
+    #pub_date = models.DateField()
 
-#     def __str__(self):
-#         return self.name
+    def __str__(self):
+        return self.name
 
 # class Post(models.Model):
 #     title = models.CharField(max_length=150)
