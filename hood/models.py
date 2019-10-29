@@ -18,16 +18,16 @@ class Neighbourhood(models.Model):
     def delete_hood(cls, hood):
         cls.objects.filter(hood=hood).delete()
 
-# class Notifications(models.Model):
-#     title = models.CharField(max_length=40)
-#     message = HTMLField() 
-#     priority = models.CharField(max_length=200) 
-#     author = models.CharField(User,max_length=30)
-#     hood = models.ForeignKey(Neighbourhood, on_delete=models.CASCADE)
-#     pub_date = models.DateField(auto_now_add=True)
+class Notifications(models.Model):
+    title = models.CharField(max_length=40)
+    message = HTMLField() 
+    priority = models.CharField(max_length=200) 
+    author = models.CharField(User,max_length=30)
+    hood = models.ForeignKey(Neighbourhood, on_delete=models.CASCADE)
+    pub_date = models.DateField(auto_now_add=True)
 
-#     def __str__(self):
-#         return str(self.title)
+    def __str__(self):
+        return str(self.title)
 
 # class Services(models.Model):
 #     healthservices = models.CharField(max_length=40)
