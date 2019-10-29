@@ -98,23 +98,23 @@ def create_post(request):
 
     return render(request, 'all-pages/post.html', {'form':form})  
 
-# def biz(request):
-#     current_user = request.user
-#     profile = Profile.objects.get(username=current_user)
+def biz(request):
+    current_user = request.user
+    profile = Profile.objects.get(username=current_user)
 
-#     if request.method == 'POST':
-#         form = BusinessForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             business = form.save(commit=False)
-#             business.owner = current_user
-#             business.hood = Profile.hood
-#             business.save()
-#             return HttpResponseRedirect('business')
+    if request.method == 'POST':
+        form = BusinessForm(request.POST, request.FILES)
+        if form.is_valid():
+            business = form.save(commit=False)
+            business.owner = current_user
+            business.hood = Profile.hood
+            business.save()
+            return HttpResponseRedirect('business')
 
-#     else:
-#         form = BusinessForm()
+    else:
+        form = BusinessForm()
 
-#     return render(request, 'all-pages/biz.html',{'form':form})   
+    return render(request, 'all-pages/biz.html',{'form':form})   
 
 # # def view_post(request, post):
 # #     current_user = request.user
