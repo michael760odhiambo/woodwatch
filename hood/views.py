@@ -167,12 +167,12 @@ def userprofile(request):
 
     return render(request, 'all-pages/userprofile.html', context)  
 
-# def posted(request):
-#     context = {
-#         'posts':Post.objects.all()
-#     }    
+def posted(request):
+    context = {
+        'posts':Post.objects.all()
+    }    
 
-#     return render(request, 'all-pages/viewpost.html', context)
+    return render(request, 'all-pages/viewpost.html', context)
 
 # def neighbourhoods(request):
 #     current_user = request.user
