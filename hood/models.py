@@ -101,17 +101,17 @@ class Comment(models.Model):
     username = models.ForeignKey(User,on_delete=models.CASCADE)
     post = models.ForeignKey(Post,on_delete=models.CASCADE)
 
-# class Hoods(models.Model):
-#     name = models.CharField(max_length=40)
-#     location = models.CharField(max_length=40)
-#     address = models.IntegerField()
-#     city = models.CharField(max_length=30)
-#     #pic = models.ImageField(upload_to='media')
-#     def __str__(self):
-#         return self.name
+class Hoods(models.Model):
+    name = models.CharField(max_length=40)
+    location = models.CharField(max_length=40)
+    address = models.IntegerField()
+    city = models.CharField(max_length=30)
+    #pic = models.ImageField(upload_to='media')
+    def __str__(self):
+        return self.name
 
-#     def save_name(self):
-#         self.save()
+    def save_name(self):
+        self.save()
 
 # class Joinhood(models.Model):
 #     your_name = models.CharField(max_length=30)
