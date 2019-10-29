@@ -44,18 +44,18 @@ class Services(models.Model):
     def delete_services(cls, Services):
         self.delete()
 
-# class Business(models.Model):
-#    logo = models.ImageField(upload_to='media')
-#    description = HTMLField()
-#    owner = models.CharField(max_length=40)
-#    hood = models.CharField(max_length=40)
-#    name = models.CharField(max_length=30)
-#    email = models.EmailField()
-#    address = models.CharField(max_length=40)
-#    contact = models.IntegerField()
+class Business(models.Model):
+   logo = models.ImageField(upload_to='media')
+   description = HTMLField()
+   owner = models.CharField(max_length=40)
+   hood = models.CharField(max_length=40)
+   name = models.CharField(max_length=30)
+   email = models.EmailField()
+   address = models.CharField(max_length=40)
+   contact = models.IntegerField()
 
-#    def __str__(self):
-#        return self.name
+   def __str__(self):
+       return self.name
 
 # class Authorities(models.Model):
 #     hood = models.ForeignKey(Neighbourhood,on_delete=models.CASCADE)
