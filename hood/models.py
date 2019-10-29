@@ -29,20 +29,20 @@ class Notifications(models.Model):
     def __str__(self):
         return str(self.title)
 
-# class Services(models.Model):
-#     healthservices = models.CharField(max_length=40)
-#     mamamboga = models.CharField(max_length=40)
-#     otherservices = models.CharField(max_length=40)
+class Services(models.Model):
+    healthservices = models.CharField(max_length=40)
+    mamamboga = models.CharField(max_length=40)
+    otherservices = models.CharField(max_length=40)
 
-#     def __str__(self):
-#         return self.healthservices
+    def __str__(self):
+        return self.healthservices
 
-#     def save_services(self):
-#         self.save()
+    def save_services(self):
+        self.save()
 
-#     @classmethod
-#     def delete_services(cls, Services):
-#         self.delete()
+    @classmethod
+    def delete_services(cls, Services):
+        self.delete()
 
 # class Business(models.Model):
 #    logo = models.ImageField(upload_to='media')
