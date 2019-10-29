@@ -160,12 +160,12 @@ def businesses(request):
 
     return render(request,'businesses.html',{"businesses":businesses})
 
-# def userprofile(request):
-#     context = {
-#         'profiles':Profile.objects.all(),
-#     }  
+def userprofile(request):
+    context = {
+        'profiles':Profile.objects.all(),
+    }  
 
-#     return render(request, 'all-pages/userprofile.html', context)  
+    return render(request, 'all-pages/userprofile.html', context)  
 
 # def posted(request):
 #     context = {
