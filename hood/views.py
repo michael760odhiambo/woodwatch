@@ -79,24 +79,24 @@ def update_profile(request):
 
     return render(request, 'all-pages/update-profile.html', {'form':form})                    
 
-# def create_post(request):
-#     current_user = request.user
-#     profile = Profile.objects.get(username=current_user)
-#     if request.method == 'POST':
-#         form = PostForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             post = form.save(commit=False)
-#             post.username = current_user
-#             post.avatar = profile.avatar
-#             post.hood = profile.hood
-#             post.save()
-#             return redirect('posted')
-#             #return HttpResponseRedirect('posted')
+def create_post(request):
+    current_user = request.user
+    profile = Profile.objects.get(username=current_user)
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.username = current_user
+            post.avatar = profile.avatar
+            post.hood = profile.hood
+            post.save()
+            return redirect('posted')
+            #return HttpResponseRedirect('posted')
 
-#     else:
-#         form = PostForm()
+    else:
+        form = PostForm()
 
-#     return render(request, 'all-pages/post.html', {'form':form})  
+    return render(request, 'all-pages/post.html', {'form':form})  
 
 # def biz(request):
 #     current_user = request.user
