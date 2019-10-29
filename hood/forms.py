@@ -1,10 +1,10 @@
-# from django import forms
-# from .models import Notifications,Business,Profile,Post,Comment,Hoods,Joinhood
+from django import forms
+from .models import Notifications,Business,Profile,Post,Comment,Hoods,Joinhood
 
-# class TrendingForm(forms.ModelForm):
-#     class Meta:
-#         model=Notifications
-#         exclude=['author','hood','post_date','priority','author']
+class TrendingForm(forms.ModelForm):
+    class Meta:
+        model=Notifications
+        exclude=['author','hood','post_date','priority','author']
 
 # class ProfileForm(forms.ModelForm):
 #     class Meta:
