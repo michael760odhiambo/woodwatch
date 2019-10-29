@@ -11,10 +11,10 @@ class ProfileForm(forms.ModelForm):
         model=Profile
         exclude=['']
 
-# class PostForm(forms.ModelForm):
-#     class Meta:
-#         model=Post
-#         exclude=['username','hood','avatar']
+class PostForm(forms.ModelForm):
+    class Meta:
+        model=Post
+        exclude=['username','hood','avatar']
 
 # class BusinessForm(forms.ModelForm):
 #     class Meta:
