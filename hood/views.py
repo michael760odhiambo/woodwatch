@@ -174,25 +174,25 @@ def posted(request):
 
     return render(request, 'all-pages/viewpost.html', context)
 
-# def neighbourhoods(request):
-#     current_user = request.user
-#     profile = Profile.objects.all()
-#     if request.method == 'POST':
-#         form = HoodForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             hoods = form.save(commit=False)
-#             hoods.user = current_user
-#            # hoods.name = name
-#             hoods.save()
-#             return redirect('userprofile')
+def neighbourhoods(request):
+    current_user = request.user
+    profile = Profile.objects.all()
+    if request.method == 'POST':
+        form = HoodForm(request.POST, request.FILES)
+        if form.is_valid():
+            hoods = form.save(commit=False)
+            hoods.user = current_user
+           # hoods.name = name
+            hoods.save()
+            return redirect('userprofile')
 
-#     else:
-#         form = HoodForm()
-#     context = {
+    else:
+        form = HoodForm()
+    context = {
        
-#         'form':form,
-#     } 
-#     return render(request, 'all-pages/hood.html',{'form':form}, context)   
+        'form':form,
+    } 
+    return render(request, 'all-pages/hood.html',{'form':form}, context)   
 
 
 # def joinone(request):
