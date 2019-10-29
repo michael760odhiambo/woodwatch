@@ -1,22 +1,22 @@
-# from django.db import models
-# from django.contrib.auth.models import User
-# from tinymce.models import HTMLField
-# import datetime
+from django.db import models
+from django.contrib.auth.models import User
+from tinymce.models import HTMLField
+import datetime
 
 
 
-# class Neighbourhood(models.Model):
-#     hood = models.CharField(max_length=40)
+class Neighbourhood(models.Model):
+    hood = models.CharField(max_length=40)
     
-#     def __str__(self):
-#         return self.hood
+    def __str__(self):
+        return self.hood
 
-#     def save_hood(self):
-#         self.save()
+    def save_hood(self):
+        self.save()
 
-#     @classmethod
-#     def delete_hood(cls, hood):
-#         cls.objects.filter(hood=hood).delete()
+    @classmethod
+    def delete_hood(cls, hood):
+        cls.objects.filter(hood=hood).delete()
 
 # class Notifications(models.Model):
 #     title = models.CharField(max_length=40)
