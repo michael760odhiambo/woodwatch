@@ -26,10 +26,10 @@ class CommentForm(forms.ModelForm):
         model=Comment
         exclude=['username','post']
 
-# class HoodForm(forms.ModelForm):
-#     class Meta:
-#         model = Hoods
-#         exclude = [''] 
+class HoodForm(forms.ModelForm):
+    class Meta:
+        model = Hoods
+        exclude = [''] 
 
 # class JoinHoodForm(forms.ModelForm):
 #     class Meta:
