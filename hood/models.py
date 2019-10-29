@@ -113,16 +113,16 @@ class Hoods(models.Model):
     def save_name(self):
         self.save()
 
-# class Joinhood(models.Model):
-#     your_name = models.CharField(max_length=30)
-#     phone_number = models.IntegerField()
-#     date_of_birth = models.IntegerField()
-#     your_estate = models.CharField(max_length=30)
+class Joinhood(models.Model):
+    your_name = models.CharField(max_length=30)
+    phone_number = models.IntegerField()
+    date_of_birth = models.IntegerField()
+    your_estate = models.CharField(max_length=30)
 
-#     def __str__(self):
-#         return self.your_name
+    def __str__(self):
+        return self.your_name
 
-#     def save_your_name(self):
-#         self.save()
+    def save_your_name(self):
+        self.save()
 
 # # Create your models here.
