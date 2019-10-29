@@ -1,0 +1,41 @@
+<!-- {% extends 'all-pages/base.html' %}
+
+{% load bootstrap4 %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+            <H1 style="text-align: center; font-style:italic; ">Welcome to Hoods.com</H1>
+            <hr>
+            <p style="text-align: center; font-style:italic; ">Keep it simple and stupid</p>
+            <nav style="text-align: center; font-style:italic; ">
+                <a href="{% url 'create-hoods' %}" class="btn btn-warning">Add your hood</a>
+                <a href="{% url 'home' %}" class="btn btn-success">back</a>
+                <a href="/accounts/logout" class="btn btn-danger">exit</a>
+            </nav>
+    </div>
+   
+        <div class="row" >
+          {% for hood in hoods %}
+          <div class="col-md-4">
+           <div class="card">
+             <img src="{{hood.avatar.url}}" alt="John" style="width:100%"> -->
+             <!-- <h1>{{hood.name}}</h1>
+             <p class="title">Be part of us on <a href="{% url 'join-hood' %}" class="btn btn-info" style="border-radius: 50px; width:120px; text-align: center;">Join the hood</a></p>
+             <p>{{hood.description}}</p>
+             
+             <div style="margin: 24px 0;">
+               <a href="#"><i class="fa fa-dribbble"></i></a> 
+               <a href="#"><i class="fa fa-twitter"></i></a>  
+               <a href="#"><i class="fa fa-linkedin"></i></a>  
+               <a href="#"><i class="fa fa-facebook"></i></a> 
+             </div>
+             <p><button>Contact</button></p>
+           </div>
+          </div>
+         {% endfor %}
+              </div>
+</div> -->
+{% endblock %}
+

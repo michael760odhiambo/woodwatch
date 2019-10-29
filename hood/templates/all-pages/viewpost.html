@@ -1,0 +1,41 @@
+<!-- {% extends 'all-pages/base.html' %}
+
+{% load bootstrap4 %}
+{% load static %}
+{% block content %}
+
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Welcome to coming soon neighbourhoods,.com</h1>
+            <nav style="text-align: center; font-style:italic; ">
+                    <a href="{% url 'posted' %}" class="btn btn-warning">Posts</a>
+                    <a href="{% url 'home' %}" class="btn btn-success">home</a>
+                    <a href="/accounts/logout" class="btn btn-danger">exit</a>
+             </nav>
+        </div>
+        <div class="row">
+          {% for post in posts %}
+            <div class="col-md-4">
+                <div class="card">
+                  <img src="{{post.image.url}}" alt="John" style="width:100%">
+                  <h1>{{post.name}}</h1>
+                  <p class="title">By {{post.username}} on {{post.pub_date}}</p>
+                  <p>{{post.description}}</p>
+                  <div style="margin: 24px 0;">
+                    <a href="#"><i class="fa fa-dribbble"></i></a> 
+                    <a href="#"><i class="fa fa-twitter"></i></a>  
+                    <a href="#"><i class="fa fa-linkedin"></i></a>  
+                    <a href="#"><i class="fa fa-facebook"></i></a> 
+                 </div>
+                 <p><button>Contact</button></p>
+                </div>
+            </div>
+          {% endfor %}
+        </div>
+
+    </div>
+
+
+
+{% endblock %} -->
