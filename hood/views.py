@@ -201,24 +201,24 @@ def joinone(request):
     }
     return render(request, 'all-pages/nhood.html', context)
 
-# def joinhood(request):
-#     current_user = request.user
-#     profile = Profile.objects.all()
-#     if request.method == 'POST':
-#         form = JoinHoodForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             hoodes = form.save(commit=False)
-#             hoodes.user = current_user
+def joinhood(request):
+    current_user = request.user
+    profile = Profile.objects.all()
+    if request.method == 'POST':
+        form = JoinHoodForm(request.POST, request.FILES)
+        if form.is_valid():
+            hoodes = form.save(commit=False)
+            hoodes.user = current_user
            
-#             hoodes.save()
+            hoodes.save()
 
-#             redirect('userprofile')
+            redirect('userprofile')
 
-#     else:
-#         form = HoodForm()
+    else:
+        form = HoodForm()
 
-#     context = {
-#          'joinhoods':Joinhood.objects.all(),
-#          'form':form,
-#     }
-#     return render(request, 'all-pages/join.html', context)
+    context = {
+         'joinhoods':Joinhood.objects.all(),
+         'form':form,
+    }
+    return render(request, 'all-pages/join.html', context)
