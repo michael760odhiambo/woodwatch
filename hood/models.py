@@ -96,10 +96,10 @@ class Post(models.Model):
         blogs = cls.objects.filter(Q(username__username=search_term) | Q(neighbourhood__neighbourhood=search_term) | Q(title__icontains=search_term))
         return blogs    
 
-# class Comment(models.Model):
-#     comment = models.CharField(max_length=300)
-#     username = models.ForeignKey(User,on_delete=models.CASCADE)
-#     post = models.ForeignKey(Post,on_delete=models.CASCADE)
+class Comment(models.Model):
+    comment = models.CharField(max_length=300)
+    username = models.ForeignKey(User,on_delete=models.CASCADE)
+    post = models.ForeignKey(Post,on_delete=models.CASCADE)
 
 # class Hoods(models.Model):
 #     name = models.CharField(max_length=40)
