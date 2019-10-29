@@ -6,10 +6,10 @@ class TrendingForm(forms.ModelForm):
         model=Notifications
         exclude=['author','hood','post_date','priority','author']
 
-# class ProfileForm(forms.ModelForm):
-#     class Meta:
-#         model=Profile
-#         exclude=['']
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model=Profile
+        exclude=['']
 
 # class PostForm(forms.ModelForm):
 #     class Meta:
