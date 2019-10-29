@@ -31,7 +31,7 @@ class HoodForm(forms.ModelForm):
         model = Hoods
         exclude = [''] 
 
-# class JoinHoodForm(forms.ModelForm):
-#     class Meta:
-#         model = Joinhood
-#         exclude = ['']                
+class JoinHoodForm(forms.ModelForm):
+    class Meta:
+        model = Joinhood
+        exclude = ['']                
