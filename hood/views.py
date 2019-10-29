@@ -58,26 +58,26 @@ def alert(request):
 
     return render(request, 'all-pages/trends.html',{'trends':trends})
 
-# def update_profile(request):
-#     current_user=request.user
-#     instance = Profile.objects.get(username=current_user)
-#     if request.method == 'POST':
-#         form = ProfileForm(request.POST, request.FILES, instance=instance)
-#         if form.is_valid():
-#             profile = form.save(commit=False)
-#             profile.username = current_user
-#             profile.save()
+def update_profile(request):
+    current_user=request.user
+    instance = Profile.objects.get(username=current_user)
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES, instance=instance)
+        if form.is_valid():
+            profile = form.save(commit=False)
+            profile.username = current_user
+            profile.save()
 
-#             return redirect('home')
+            return redirect('home')
 
-#     elif Profile.objects.get(username=current_user):
-#         profile = Profile.objects.get(username=current_user)
-#         form = ProfileForm(instance=profile)
+    elif Profile.objects.get(username=current_user):
+        profile = Profile.objects.get(username=current_user)
+        form = ProfileForm(instance=profile)
 
-#     else:
-#         form = ProfileForm()
+    else:
+        form = ProfileForm()
 
-#     return render(request, 'all-pages/update-profile.html', {'form':form})                    
+    return render(request, 'all-pages/update-profile.html', {'form':form})                    
 
 # def create_post(request):
 #     current_user = request.user
