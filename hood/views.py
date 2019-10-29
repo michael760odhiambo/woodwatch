@@ -21,18 +21,18 @@ def home(request):
 
     return render(request, 'all-pages/index.html')
 
-# def create_profile(request):
-#     current_user=request.user
-#     if request.method == 'POST':
-#         form = ProfileForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             profile = form.save(commit=False)
-#             profile.user = current_user
-#             profile.save()
-#             return HttpResponseRedirect('/')
-#     else:
-#         form = ProfileForm()
-#     return render(request, 'all-pages/profile.html',{'form':form})
+def create_profile(request):
+    current_user=request.user
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            profile = form.save(commit=False)
+            profile.user = current_user
+            profile.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = ProfileForm()
+    return render(request, 'all-pages/profile.html',{'form':form})
 
 # def trending(request):
 #     current_user= request.user
