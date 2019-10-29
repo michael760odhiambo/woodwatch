@@ -51,12 +51,12 @@ def trending(request):
     return render(request, 'all-pages/trends.html', {'form':form})
 
 
-# def alert(request):
-#     current_user= request.user
-#     profile = Profile.objects.get(username=current_user)
-#     trends = Notifications.objects.filter()
+def alert(request):
+    current_user= request.user
+    profile = Profile.objects.get(username=current_user)
+    trends = Notifications.objects.filter()
 
-#     return render(request, 'all-pages/trends.html',{'trends':trends})
+    return render(request, 'all-pages/trends.html',{'trends':trends})
 
 # def update_profile(request):
 #     current_user=request.user
