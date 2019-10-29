@@ -152,13 +152,13 @@ def authorities(request):
 
     return render(request,'authorities.html',{"authorities":authorities})
 
-# @login_required(login_url='/accounts/login/')
-# def businesses(request):
-#     current_user=request.user
-#     profile=Profile.objects.get(username=current_user)
-#     businesses = Business.objects.filter(hood=profile.hood)
+@login_required(login_url='/accounts/login/')
+def businesses(request):
+    current_user=request.user
+    profile=Profile.objects.get(username=current_user)
+    businesses = Business.objects.filter(hood=profile.hood)
 
-#     return render(request,'businesses.html',{"businesses":businesses})
+    return render(request,'businesses.html',{"businesses":businesses})
 
 # def userprofile(request):
 #     context = {
