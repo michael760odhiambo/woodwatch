@@ -1,25 +1,25 @@
-# from django.shortcuts import render,redirect
-# from .models import Neighbourhood,Services,Authorities,Post,Profile,Notifications,Comment,Business,Hoods,Joinhood
-# from django.http import HttpResponse,Http404,HttpResponseRedirect
-# from django.contrib.auth.decorators import login_required
-# from django.core.exceptions import ObjectDoesNotExist
-# #from .email import send_priority_email
-# from django.shortcuts import get_list_or_404, get_object_or_404
-# from .forms import TrendingForm,ProfileForm,PostForm,BusinessForm,CommentForm,HoodForm,JoinHoodForm
+from django.shortcuts import render,redirect
+from .models import Neighbourhood,Services,Authorities,Post,Profile,Notifications,Comment,Business,Hoods,Joinhood
+from django.http import HttpResponse,Http404,HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ObjectDoesNotExist
+#from .email import send_priority_email
+from django.shortcuts import get_list_or_404, get_object_or_404
+from .forms import TrendingForm,ProfileForm,PostForm,BusinessForm,CommentForm,HoodForm,JoinHoodForm
 
 
-# def home(request):
-#     try:
-#         if not request.user.is_authenticated:
-#             return HttpResponseRedirect('/accounts/login')
-#             current_user = request.user
-#             profile = Profile.objects.get(username=current_user)
+def home(request):
+    try:
+        if not request.user.is_authenticated:
+            return HttpResponseRedirect('/accounts/login')
+            current_user = request.user
+            profile = Profile.objects.get(username=current_user)
 
-#     except ObjectDoesNotExist:
-#             return redirect('create-profile')
+    except ObjectDoesNotExist:
+            return redirect('create-profile')
 
 
-#     return render(request, 'all-pages/index.html')
+    return render(request, 'all-pages/index.html')
 
 # def create_profile(request):
 #     current_user=request.user
