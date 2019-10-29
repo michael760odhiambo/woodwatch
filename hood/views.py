@@ -195,11 +195,11 @@ def neighbourhoods(request):
     return render(request, 'all-pages/hood.html',{'form':form}, context)   
 
 
-# def joinone(request):
-#     context = {
-#          'hoods':Hoods.objects.all(),
-#     }
-#     return render(request, 'all-pages/nhood.html', context)
+def joinone(request):
+    context = {
+         'hoods':Hoods.objects.all(),
+    }
+    return render(request, 'all-pages/nhood.html', context)
 
 # def joinhood(request):
 #     current_user = request.user
